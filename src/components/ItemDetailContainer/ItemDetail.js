@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Card, ListGroup, Button } from "react-bootstrap"
 import ItemCount from "./ItemCount";
 import { Link } from 'react-router-dom';
+import CartContext from "../../context/cartContext";
 
 const ItemDetail = ({ product }) => {
+    const { addItem } = useContext(CartContext);
     const [count, setCount] = useState(0);
     const [showItemCount, setShowItemCount] = useState(true);
 
@@ -11,6 +13,7 @@ const ItemDetail = ({ product }) => {
     const handleAdd = (value) => {
         setCount(value);
         setShowItemCount(false);
+        addItem(product, value);
     }
 
     return (

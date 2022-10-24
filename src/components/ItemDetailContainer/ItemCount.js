@@ -22,8 +22,8 @@ const ItemCount = ({ initial, stock, onAdd }) => {
 
 
     return (
-        <div class="item_count">
-            <div class="item_counter">
+        <div className="item_count">
+            <div className="item_counter">
                 <Button variant="danger" disabled={count <= 0} onClick={handleSubstract}>-</Button>
                 <h5>{count}</h5>
                 <Button variant="success" disabled={count >= stock} onClick={handleAdd}>+</Button>
