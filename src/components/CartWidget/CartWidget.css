@@ -2,3 +2,8 @@
     color: white;
     font-size: 30px;
 }
+
+.item_total{
+    position: absolute;
+    color: white;
+}
