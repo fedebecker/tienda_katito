@@ -16,7 +16,7 @@ const OrderModal = ({ showModal, onClose, cart, total, clear }) => {
             name: formName,
             phone: formPhone,
             email: formEmail
-        }
+        };
         const newOrder = {
             buyer: newBuyer,
             items: cart,
@@ -47,7 +47,7 @@ const OrderModal = ({ showModal, onClose, cart, total, clear }) => {
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-                {!orderId && formName&&formPhone&&formEmail&& (
+                {!orderId && formName && formPhone && formEmail && (
                     <>
                         <Button variant="danger" onClick={onClose}>
                             Cerrar
