@@ -5,6 +5,19 @@ Este proyecto fue creado con:
 - ReactJS
 - Bootstrap
 - Firebase
+
+
+### Deployment
+
+[https://tiendakatito.vercel.app/](https://tiendakatito.vercel.app/)
+
+
+## Demo
+![](https://firebasestorage.googleapis.com/v0/b/katito-ecommerce.appspot.com/o/navegacion.gif?alt=media&token=48944a3f-243c-47a0-a932-158386d37c6c)
+## Estructura de directorios
+- `/components`
+- `/context`
+- `utils`
 ## Available Scripts
 
 In the project directory, you can run:
@@ -27,13 +40,8 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Deployment
-
-
