@@ -10,7 +10,7 @@ const NavBar = ()=>{
                 <Navbar.Brand as={Link} to='/'>
                     Katito
                 </Navbar.Brand>
-                <Nav className="me-auto">
+                <Nav className="aumento me-auto">
                     <Nav.Link as={Link} to='/'>Inicio</Nav.Link>
                     <Nav.Link as={Link} to='/category/superior'>Tren Superior</Nav.Link>
                     <Nav.Link as={Link} to='/category/inferior'>Tren Inferior</Nav.Link>

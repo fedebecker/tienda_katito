@@ -29,7 +29,7 @@ const ItemDetail = ({ product }) => {
                 </ListGroup>
                         {
                             showItemCount
-                                ? (<ItemCount initial={0} stock={10} onAdd={handleAdd}></ItemCount>)
+                                ? (<ItemCount initial={0} stock={product.stock} onAdd={handleAdd}></ItemCount>)
                                 : (<Link to='/cart'>
                                     <Button variant="success">Ver carrito</Button>
                                 </Link>)

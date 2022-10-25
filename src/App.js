@@ -7,6 +7,8 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import { CartProvider } from './context/cartContext';
+import { useEffect } from 'react';
+import { createAllProducts } from './utils/products';
 
 function App() {
   return (
