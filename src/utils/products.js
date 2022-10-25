@@ -48,16 +48,3 @@ export const getProductsByCategory = (categoryId) => {
     })
     .catch(error => console.warn(error))
 }
-
-// export const createAllProducts = async () => {
-//   try {
-//     const database = getFirestore();
-//     const collectionReference = collection(database, 'items');
-//     for (const product of products) {
-//       const snapshot = await addDoc(collectionReference, product)
-
-//     }
-//   } catch (error) {
-//     console.warn(error)
-//   }
-// }
