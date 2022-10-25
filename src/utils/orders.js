@@ -1,4 +1,4 @@
-import { addDoc, getFirestore, collection, getDocs} from 'firebase/firestore'
+import { addDoc, getFirestore, collection, getDocs, getDoc} from 'firebase/firestore'
 
 
 export const createOrder = (newOrder) => {
@@ -27,3 +27,22 @@ export const getOrders = () => {
       })
       .catch(error => console.warn(error))
 }
+
+export const getOrder = (id) => {
+    const database = getFirestore();
+    const itemReference = collection(database, 'orders', id);
+
+    return getDoc(itemReference)
+    .then(snapshot => {
+      if (snapshot.exists()) {
+        const item = {
+          id: snapshot.id,
+          ...snapshot.data()
+        }
+        return item;
+      }
+    })
+    .catch(error => console.warn(error))
+}
+
+

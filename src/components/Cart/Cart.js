@@ -1,5 +1,5 @@
 import { useContext, useState } from "react"
-import { Button, Container, Form, Modal, Table } from "react-bootstrap"
+import { Button, Container, Table } from "react-bootstrap"
 import CartContext from "../../context/cartContext"
 import { FaTrashAlt } from "react-icons/fa"
 import "./Cart.css"
