@@ -4,20 +4,12 @@ import CartContext from "../../context/cartContext"
 import { FaTrashAlt } from "react-icons/fa"
 import "./Cart.css"
 import { Link } from "react-router-dom"
-import { createOrder } from "../../utils/orders"
 import OrderModal from "../OrderModal/OrderModal"
 
-const buyerMock = {
-    name: 'Federico',
-    phone: '1122334455',
-    email: 'fede@becker.com'
-}
 
 const Cart = () => {
     const { cart, total, removeItem, clear } = useContext(CartContext)
-    const [user, setUser] = useState(buyerMock);
     const [showModal, setShowModal] = useState(false);
-    const [orderId, setOrderId] = useState();
 
     const handleDelete = (itemId) => {
         removeItem(itemId);
@@ -25,17 +17,6 @@ const Cart = () => {
 
     const handleEmptyCart = () => {
         clear();
-    }
-
-    const handleBuy = async () => {
-        const newOrder = {
-            buyer: buyerMock,
-            items: cart,
-            total
-        };
-        const newOrderId = await createOrder(newOrder);
-        setOrderId(newOrderId);
-        clear()
     }
 
     const handleOpenClose = () => {
@@ -97,7 +78,7 @@ const Cart = () => {
                     </Link>
                 </>
             )}
-            <OrderModal showModal={showModal} onClose={handleOpenClose} onBuy={handleBuy} orderId={orderId}/>
+            <OrderModal showModal={showModal} onClose={handleOpenClose} cart={cart} total={total} clear={handleEmptyCart} />
         </Container>
     )
 }

@@ -25,6 +25,7 @@ const Checkout = () => {
                                 <th>Nro de Orden</th>
                                 <th>Nombre comprador</th>
                                 <th>Monto total</th>
+                                <th>Estado</th>
                             </tr>
                         </thead>
                         <tbody>
